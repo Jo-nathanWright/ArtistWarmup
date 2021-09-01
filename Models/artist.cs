@@ -5,21 +5,20 @@ namespace artist.Models
 {
     public class Artist
     {
-        public string Id { get; set; }
+        public int id { get; set; }
         [Required]
-        public string Name { get; set; }
+        public string name { get; set; }
         [Required]
         [Range(0, int.MaxValue)]
-        public int Paintings { get; set; }
+        public int paintings { get; set; }
         [Required]
-        public bool Famous { get; set; }
+        public bool deceased { get; set; }
 
-        public Artist(string name, int paintings, bool famous)
+        public Artist(string n, int p, bool d)
         {
-            Name = name;
-            Paintings = paintings;
-            Famous = famous;
-            Id = Guid.NewGuid().ToString();
+            name = n;
+            paintings = p;
+            deceased = d;
         }
   }
 }

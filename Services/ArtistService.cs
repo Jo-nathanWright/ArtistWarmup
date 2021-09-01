@@ -10,9 +10,9 @@ namespace artist.Services
         {
             return FakeDB.Artists;
         }
-        internal Artist Get(string id)
+        internal Artist Get(int id)
         {
-            Artist found = FakeDB.Artists.Find(a => a.Id == id);
+            Artist found = FakeDB.Artists.Find(a => a.id == id);
             if(found == null)
             {
                 throw new Exception("Invalid Id");
@@ -26,9 +26,9 @@ namespace artist.Services
             return newArtist;
         }
 
-        internal void Delete(string id)
+        internal void Delete(int id)
         {
-            int deleted = FakeDB.Artists.RemoveAll(a => a.Id == id);
+            int deleted = FakeDB.Artists.RemoveAll(a => a.id == id);
             if(deleted == 0){
                 throw new Exception("Invalid Id");
             }

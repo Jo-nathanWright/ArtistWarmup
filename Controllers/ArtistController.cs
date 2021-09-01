@@ -35,7 +35,7 @@ namespace artist.Controllers
 
     [HttpGet("{id}")]
 
-    public ActionResult<Artist> Get(string id)
+    public ActionResult<Artist> Get(int id)
     {
         try
         {
@@ -65,7 +65,7 @@ namespace artist.Controllers
 
     [HttpDelete("{id}")]
 
-    public ActionResult<Artist> Delete(string id)
+    public ActionResult<Artist> Delete(int id)
     {
         try
         {
