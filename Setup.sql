@@ -5,6 +5,7 @@ CREATE TABLE artists (
     deceased TINYINT comment 'artist is deceased'
 ) default charset utf8 comment '';
 
+/* Create */
 INSERT INTO artists (
   name,
   paintings,
@@ -15,3 +16,19 @@ INSERT INTO artists (
   75,
   1
 )
+/* Get All */
+SELECT * FROM artists;
+
+/* GetBy*/
+SELECT * FROM artists WHERE id = 2;
+
+UPDATE artists SET name = "Van Going" WHERE id = 2;
+
+DELETE FROM artists WHERE id = 2;
+
+/*DANGER ZONE*/
+-- DELETE FROM artists; //REMOVES WHOLE TABLE
+
+-- DROP TABLE artists; //REMOVES entire Database
+
+--DROP CLASSROOM; 
